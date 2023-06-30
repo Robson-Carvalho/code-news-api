@@ -22,6 +22,7 @@ const news = {
   requisitionDate: "",
   result: [],
 };
+
 const date = (decreaseDays = 0) => {
   let date = new Date();
   let year = date.getFullYear();
@@ -31,7 +32,6 @@ const date = (decreaseDays = 0) => {
 };
 
 app.get("/", async (req, res) => {
-  console.log(date(1));
   if (news.requisitionDate !== date(1) || news.result.length === 0) {
     await newsapi.v2
       .everything({
