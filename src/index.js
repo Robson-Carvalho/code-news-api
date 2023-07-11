@@ -49,7 +49,7 @@ app.get("/", async (req, res) => {
     return res.json({ news });
   }
 
-  return res.json({ news });
+  return res.json({ news });    
 });
 
 app.listen(port, () =>
